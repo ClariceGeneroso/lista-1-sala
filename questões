@@ -1,0 +1,179 @@
+Questão 1
+nota1=float(input("digite a primeira nota:"))    
+nota2=float(input("digite a SEGUNDA nota:"))
+nota3=float(input("digite a TERCEIRA nota:"))
+
+media=(nota1+nota2+nota3)/3
+
+if media >=6.0:
+    print(f"parabens! vocẽ foi aprovado com média '%.2f' %(media).")
+
+else:
+    print(f"Infelizmente! vocẽ não foi aprrovado com média '%.2f (media).")
+
+Questão 2
+nota1=float(input("digite a primeira nota:"))
+nota2=float(input("digite a SEGUNDA nota:"))
+
+media=(nota1+nota2)/2
+
+if media >=6.0:
+    print(f"parabens!vocẽ foi aprovado com média %.2f." %(media))
+
+else:
+    nota_exame=float(input("Digite a nota do exame:"))
+    nova_media=(media+nota_exame)/2
+    if nova_media >= 5.0:
+        print(f"parabens! vocẽ foi em exame com média %.2f" %(nova_media))
+    else:
+        print(f"Infelizmente! vocẽ não foi em exame com média %.2f" %(nova_media))
+
+Questão 3
+valor1=float(input("digite o primeiro valor:"))
+valor2=float(input("digite o segundo valor:"))
+
+diferença=abs(valor1-valor2)
+maior=max(valor1,valor2)
+menor=min(valor1,valor2)
+print(f"A diferença do maior para o menor é:{maior - menor}")
+
+Questão 4
+a=float(input("digite o  valor do lado A do triângulo:"))
+b=float(input("digite o  valor do lado B do triângulo:"))
+c=float(input("digite o  valor do lado C do triângulo:"))
+
+
+if a + b > c and a + c >b and b + c >a:
+    if a == b == c:
+        print("Equilátero")
+    elif a == b or a == c or b == c:
+        print("Isósceles")
+    else:
+        print("Escaleno")
+else:
+   print("os dois lados fornecidos não formam um triângulo")
+
+Questão 5
+A=float(input("digite o  valor de A:"))
+B=float(input("digite o  valor de B:"))
+C=float(input("digite o  valor de C:"))
+valores_ordenados=sorted([A,B,C])
+print("Valores em ordem crescente:",valores_ordenados)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
