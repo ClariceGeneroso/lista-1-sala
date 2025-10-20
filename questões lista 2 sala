@@ -60,7 +60,55 @@ C=float(input("digite o  valor de C:"))
 valores_ordenados=sorted([A,B,C])
 print("Valores em ordem crescente:",valores_ordenados)
 
+Questão 6
+import math
+a = float(input("\nDigite o valor de A: "))
+b = float(input("Digite o valor de B: "))
+c = float(input("Digite o valor de C: "))
 
+if a == 0:
+    print("Não é uma equação do 2º grau.")
+else:
+    delta = b**2 - 4*a*c
+    if delta < 0:
+        print("Não existem raízes reais.")
+    elif delta == 0:
+        x = -b / (2*a)
+        print(f"Raiz única: x = {x:.2f}")
+    else:
+        x1 = (-b + math.sqrt(delta)) / (2*a)
+        x2 = (-b - math.sqrt(delta)) / (2*a)
+        print(f"As raízes são: x1 = {x1:.2f} e x2 = {x2:.2f}")
+
+Questão  7
+n = int(input("\nDigite um número inteiro (positivo ou negativo): "))
+print(f"O módulo é {abs(n)}")
+
+Questão 8
+a = int(input("\nDigite o 1º número: "))
+b = int(input("Digite o 2º número: "))
+c = int(input("Digite o 3º número: "))
+
+for num in [a, b, c]:
+    if num % 2 == 0 and num % 3 == 0:
+        print(f"{num} é divisível por 2 e 3")
+
+Questão 9
+x = int(input("\nDigite o 1º número: "))
+y = int(input("Digite o 2º número: "))
+
+for num in [x, y]:
+    if num % 4 == 0 or num % 5 == 0:
+        print(f"{num} é divisível por 4 ou 5")
+
+Questão 10
+mes = int(input("\nDigite o número do mês (1 a 12): "))
+meses = {
+    1: "Janeiro", 2: "Fevereiro", 3: "Março", 4: "Abril",
+    5: "Maio", 6: "Junho", 7: "Julho", 8: "Agosto",
+    9: "Setembro", 10: "Outubro", 11: "Novembro", 12: "Dezembro"
+}
+print(meses.get(mes, "Mês inválido!"))
 
 
 
