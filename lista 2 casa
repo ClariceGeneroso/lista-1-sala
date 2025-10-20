@@ -1,0 +1,94 @@
+# LISTA 2 – Casa 
+
+Questão 1
+num = int(input("Digite um número: "))
+if num % 2 == 0:
+    print("O número é par.")
+else:
+    print("O número é ímpar.")
+
+Questão  2
+numero_chave = 20
+num = int(input("\nDigite um número entre 0 e 100: "))
+distancia = abs(numero_chave - num)
+print(f"A distância entre {num} e {numero_chave} é {distancia}.")
+
+Questão  3
+nota = float(input("\nDigite a nota do aluno: "))
+resto = nota - int(nota)
+if resto > 0.5:
+    nota_arredondada = int(nota) + 1
+else:
+    nota_arredondada = int(nota)
+print(f"Nota arredondada: {nota_arredondada:.1f}")
+
+Questão 4
+a = float(input("\nDigite o primeiro número: "))
+b = float(input("Digite o segundo número: "))
+c = float(input("Digite o terceiro número: "))
+
+numeros = [a, b, c]
+numeros.sort()
+print(f"Menor: {numeros[0]}")
+print(f"Do meio: {numeros[1]}")
+print(f"Maior: {numeros[2]}")
+
+Questão 5
+
+total_geral = 0
+
+while True:
+    salario_bruto = float(input("\nDigite o salário bruto (ou 0 para encerrar): "))
+    if salario_bruto == 0:
+        break
+    horas_trabalhadas = float(input("Digite o número de horas trabalhadas no mês: "))
+
+    if salario_bruto < 800:
+        faixa = 1
+    elif salario_bruto <= 1600:
+        faixa = 2
+    else:
+        faixa = 3
+
+    match faixa:
+        case 1:
+            desconto = 0
+        case 2:
+            desconto = salario_bruto * (0.08 + 0.05)
+        case 3:
+            desconto = salario_bruto * (0.15 + 0.07)
+
+    if horas_trabalhadas > 160:
+        valor_hora = salario_bruto / 160
+        horas_extras = horas_trabalhadas - 160
+        adicional = horas_extras * valor_hora * 0.5
+    else:
+        adicional = 0
+
+    salario_liquido = salario_bruto - desconto + adicional
+    print(f"Salário líquido: R${salario_liquido:.2f}")
+
+    total_geral += salario_liquido
+
+print(f"\nTotal geral dos salários líquidos: R${total_geral:.2f}")
+
+
+Questão 6
+mes = int(input("\nDigite o número do mês (1 a 12): "))
+meses = {
+    1: "Janeiro", 2: "Fevereiro", 3: "Março", 4: "Abril",
+    5: "Maio", 6: "Junho", 7: "Julho", 8: "Agosto",
+    9: "Setembro", 10: "Outubro", 11: "Novembro", 12: "Dezembro"
+}
+print(meses.get(mes, "Mês inválido!"))
+
+Questão  7
+codigo = int(input("\nDigite o código do curso (1 a 5): "))
+cursos = {
+    1: "Engenharia",
+    2: "Edificações",
+    3: "Sistemas Elétricos",
+    4: "Turismo",
+    5: "Análise de Sistemas"
+}
+print(cursos.get(codigo, "Código inválido!"))
