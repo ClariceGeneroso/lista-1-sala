@@ -62,68 +62,82 @@ print("Valores em ordem crescente:",valores_ordenados)
 
 Questão 6
 import math
-a = float(input("\nDigite o valor de A: "))
-b = float(input("Digite o valor de B: "))
-c = float(input("Digite o valor de C: "))
 
-if a == 0:
-    print("Não é uma equação do 2º grau.")
+a=float(input("Digite o valor do coeficiente 'a': "))
+b=float(input("Digite o valor do coeficiente 'b': "))
+c=float(input("Digite o valor do coeficiente 'c': "))
+
+discriminante = b**2 - 4*a*c
+
+if discriminante > 0:
+    raiz1 = (-b + math.sqrt(discriminante)) / (2*a)
+    raiz2 = (-b - math.sqrt(discriminante)) / (2*a)
+    print("Raízes reais e distintas:", raiz1, "e", raiz2)
+    
+elif discriminante == 0:
+    raiz = -b / (2*a)
+    print("Raízes reais e iguais:", raiz)
+    
 else:
-    delta = b**2 - 4*a*c
-    if delta < 0:
-        print("Não existem raízes reais.")
-    elif delta == 0:
-        x = -b / (2*a)
-        print(f"Raiz única: x = {x:.2f}")
-    else:
-        x1 = (-b + math.sqrt(delta)) / (2*a)
-        x2 = (-b - math.sqrt(delta)) / (2*a)
-        print(f"As raízes são: x1 = {x1:.2f} e x2 = {x2:.2f}")
+    parte_real = -b / (2*a)
+    parte_imaginaria = math.sqrt(abs(discriminante)) / (2*a)
+    print("Raízes complexas:", complex(parte_real, parte_imaginaria), complex(parte_real, -parte_imaginaria))
+
 
 Questão  7
-n = int(input("\nDigite um número inteiro (positivo ou negativo): "))
-print(f"O módulo é {abs(n)}")
+a=float(input("Digite um número inteiro: "))
+
+if a>=0:
+    print("O módulo desse número é:", a)
+else:
+    a=a*(-1)
+    print("O módulo desse número é:", a)
+
 
 Questão 8
-a = int(input("\nDigite o 1º número: "))
-b = int(input("Digite o 2º número: "))
-c = int(input("Digite o 3º número: "))
+a = float(input("Digite o primeiro valor: "))
+b = float(input("Digite o segundo valor: "))
+c = float(input("Digite o terceiro valor: "))
 
-for num in [a, b, c]:
-    if num % 2 == 0 and num % 3 == 0:
-        print(f"{num} é divisível por 2 e 3")
+if a % 2 == 0 and a % 3 == 0:
+    print("O número", a, "é divisível por 2 e 3.")
+else:
+    print("O número", a, "não é divisível por 2 e 3.")
+    
+    
+if b % 2 == 0 and b % 3 == 0:
+    print("O número", b, "é divisível por 2 e 3.")
+else:
+    print("O número", b, "não é divisível por 2 e 3.")
+    
+    
+if c % 2 == 0 and c % 3 == 0:
+    print("O número", c, "é divisível por 2 e 3.")
+else:
+    print("O número", c, "não é divisível por 2 e 3.")
+
 
 Questão 9
-x = int(input("\nDigite o 1º número: "))
-y = int(input("Digite o 2º número: "))
+a = float(input("Digite o primeiro valor: "))
+b = float(input("Digite o segundo valor: "))
+c = float(input("Digite o terceiro valor: "))
 
-for num in [x, y]:
-    if num % 4 == 0 or num % 5 == 0:
-        print(f"{num} é divisível por 4 ou 5")
-
-Questão 10
-mes = int(input("\nDigite o número do mês (1 a 12): "))
-meses = {
-    1: "Janeiro", 2: "Fevereiro", 3: "Março", 4: "Abril",
-    5: "Maio", 6: "Junho", 7: "Julho", 8: "Agosto",
-    9: "Setembro", 10: "Outubro", 11: "Novembro", 12: "Dezembro"
-}
-print(meses.get(mes, "Mês inválido!"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if a % 4 == 0 or a % 5 == 0:
+    print("O número", a, "é divisível por 4 ou 5.")
+else:
+    print("O número", a, "não é divisível por 4 e 5.")
+    
+    
+if b % 4 == 0 or b % 5 == 0:
+    print("O número", b, "é divisível por 4 ou 5.")
+else:
+    print("O número", b, "não é divisível por 4 ou 5.")
+    
+    
+if c % 4 == 0 or c % 5 == 0:
+    print("O número", c, "é divisível por 4 ou 5.")
+else:
+    print("O número", c, "não é divisível por 4 ou 5.")
 
 
 
