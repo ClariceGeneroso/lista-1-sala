@@ -1,4 +1,4 @@
-# LISTA 2 – Casa 
+#LISTA 2 – Casa 
 
 Questão 1
 num = int(input("Digite um número: "))
